@@ -16,9 +16,10 @@ def main():
 		Plant("Lily", 40, 45)
 	]
 
-print("=== Garden Plant Registry ===")
-for plant in garden:
-	plant.show()
+	print("=== Garden Plant Registry ===")
+
+	for plant in garden:
+		plant.show()
 
 if __name__ == "__main__":
 	main()
