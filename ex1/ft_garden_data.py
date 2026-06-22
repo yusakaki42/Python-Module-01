@@ -1,25 +1,33 @@
 #!/usr/bin/env python3
 
 class Plant:
-    def __init__(self, name:str, height:int, age:int):
-        self.name = name
-        self.height = height
-        self.age = age
+    name: str
+    height: int
+    age: int
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.age} days old")
 
-def main():
-	garden = [
-		Plant("Rose", 25, 30),
-		Plant("Tulip", 15, 20),
-		Plant("Lily", 40, 45)
-	]
+def main() -> None:
+    rose = Plant()
+    rose.name = "Rose"
+    rose.height = 25
+    rose.age = 30
 
-	print("=== Garden Plant Registry ===")
+    sunflower = Plant()
+    sunflower.name = "Sunflower"
+    sunflower.height = 80
+    sunflower.age = 45
 
-	for plant in garden:
-		plant.show()
+    cactus = Plant()
+    cactus.name = "Cactus"
+    cactus.height = 15
+    cactus.age = 120
+
+    print("=== Garden Plant Registry ===")
+    plants = [rose, sunflower, cactus]
+    for plant in plants:
+        plant.show()
 
 if __name__ == "__main__":
-	main()
+    main()
