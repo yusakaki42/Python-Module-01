@@ -5,11 +5,11 @@ class Plant:
         self.name = name
         self._height = height
         self._age = age
-        # self.set_height(height)
-        # self.set_age(age)
+        self.set_height(height)
+        self.set_age(age)
 
     def get_height(self) -> float:
-        return self._height
+        return round(self._height, 1)
 
     def get_age(self) -> int:
         return self._age
