@@ -5,8 +5,6 @@ class Plant:
         self.name = name
         self._height = height
         self._age = age
-        self.set_height(height)
-        self.set_age(age)
 
     def get_height(self) -> float:
         return round(self._height, 1)
@@ -33,8 +31,7 @@ class Plant:
 def main() -> None:
     print("=== Garden Security System ===")
     rose = Plant("Rose", 15.0, 10)
-    # print(f"Plant created: {rose.name}: {rose.get_height()}cm, {rose.get_age()} days old\n")
-    print(f"Plant created: {rose.name}: {rose._height}cm, {rose._age} days old\n")
+    print(f"Plant created: {rose.name}: {rose.get_height()}cm, {rose.get_age()} days old\n")
 
     rose.set_height(25.0)
     rose.set_age(30)
