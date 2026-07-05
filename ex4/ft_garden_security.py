@@ -14,7 +14,7 @@ class Plant:
 
     def set_height(self, new_height: float) -> None:
         if new_height < 0:
-            print(f"{self.name}: Error, height can't be negative")
+            print(f"{self._name}: Error, height can't be negative")
             print("Height update rejected")
         else:
             self._height = new_height
@@ -22,7 +22,7 @@ class Plant:
 
     def set_age(self, new_age: int) -> None:
         if new_age < 0:
-            print(f"{self.name}: Error, age can't be negative")
+            print(f"{self._name}: Error, age can't be negative")
             print("Age update rejected")
         else:
             self._age = new_age
@@ -33,7 +33,7 @@ def main() -> None:
     print("=== Garden Security System ===")
     rose = Plant("Rose", 15.0, 10)
     print(
-        f"Plant created: {rose.name}: {rose.get_height()}cm, {rose.get_age()} days old\n")
+        f"Plant created: {rose._name}: {rose.get_height()}cm, {rose.get_age()} days old\n")
 
     rose.set_height(25.0)
     rose.set_age(30)
@@ -42,7 +42,7 @@ def main() -> None:
     rose.set_age(-1)
     print()
     print(
-        f"Current state: {rose.name}: {rose.get_height()}cm, {rose.get_age()} days old")
+        f"Current state: {rose._name}: {rose.get_height()}cm, {rose.get_age()} days old")
 
 
 if __name__ == "__main__":
