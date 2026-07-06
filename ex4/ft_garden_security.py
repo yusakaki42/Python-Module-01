@@ -29,7 +29,8 @@ class Plant:
             print(f"Age updated: {self._age} days")
 
     def show(self) -> None:
-        print(f"{self._name}: {self.get_height()}cm, {self.get_age()} days old")
+        print(f"{self._name}: {self.get_height()}cm, {self.get_age()}")
+        print(" days old")
 
 
 def main() -> None:
@@ -44,7 +45,7 @@ def main() -> None:
     rose.set_height(-1.0)
     rose.set_age(-1)
     print()
-    print("Current state: ",end="")
+    print("Current state: ", end="")
     rose.show()
 
 
