@@ -28,21 +28,24 @@ class Plant:
             self._age = new_age
             print(f"Age updated: {self._age} days")
 
+    def show(self) -> None:
+        print(f"{self._name}: {self.get_height()}cm, {self.get_age()} days old")
+
 
 def main() -> None:
     print("=== Garden Security System ===")
     rose = Plant("Rose", 15.0, 10)
-    print(
-        f"Plant created: {rose._name}: {rose.get_height()}cm, {rose.get_age()} days old\n")
-
+    print("Plant created: ", end="")
+    rose.show()
+    print()
     rose.set_height(25.0)
     rose.set_age(30)
     print()
     rose.set_height(-1.0)
     rose.set_age(-1)
     print()
-    print(
-        f"Current state: {rose._name}: {rose.get_height()}cm, {rose.get_age()} days old")
+    print("Current state: ",end="")
+    rose.show()
 
 
 if __name__ == "__main__":
