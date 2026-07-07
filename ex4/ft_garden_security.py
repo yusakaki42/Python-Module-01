@@ -29,7 +29,7 @@ class Plant:
             print(f"Age updated: {self._age} days")
 
     def show(self) -> None:
-        print(f"{self._name}: {self.get_height()}cm, {self.get_age()}")
+        print(f"{self._name}: {self.get_height()}cm, {self.get_age()}", end="")
         print(" days old")
 
 
