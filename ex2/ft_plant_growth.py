@@ -20,11 +20,11 @@ def main() -> None:
     rose = Plant("Rose", height, 30)
 
     print("=== Garden Plant Growth ===")
-
+    rose.show()
     for day in range(7):
         print(f"=== Day {day + 1} ===")
-        rose.show()
         rose.grow()
+        rose.show()
 
     total_growth = round(rose.height - height, 1)
 
