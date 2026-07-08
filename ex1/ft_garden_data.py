@@ -11,25 +11,25 @@ class Plant:
 
 
 def main() -> None:
-    print("=== Garden Plant Registry ===")
-
     rose = Plant()
     rose.name = "Rose"
     rose.height = 25
     rose.age = 30
-    rose.show()
 
     sunflower = Plant()
     sunflower.name = "Sunflower"
     sunflower.height = 80
     sunflower.age = 45
-    sunflower.show()
 
     cactus = Plant()
     cactus.name = "Cactus"
     cactus.height = 15
     cactus.age = 120
-    cactus.show()
+
+    print("=== Garden Plant Registry ===")
+    plants = [rose, sunflower, cactus]
+    for plant in plants:
+        plant.show()
 
 
 if __name__ == "__main__":
