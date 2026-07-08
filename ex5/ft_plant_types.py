@@ -3,8 +3,10 @@
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self._name: str = name
-        self._height: float = height
-        self._age: int = age
+        self._height: float = 0.0
+        self._age: int = 0
+        self.set_height(height)
+        self.set_age(age)
 
     def get_height(self) -> float:
         return round(self._height, 1)
